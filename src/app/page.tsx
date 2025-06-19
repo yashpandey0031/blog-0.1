@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Pixelify_Sans } from "next/font/google";
+import Link from "next/link";
 
 const pixelify = Pixelify_Sans({
   subsets: ["latin"],
@@ -12,17 +13,26 @@ export default function Home() {
     <div
       className={`${pixelify.className} bg-custom-hero bg-cover bg-center min-h-screen text-white p-30 pt-6`}
     >
-      <div className="bg-amber-200 shadow-xl">
-        <header className="flex justify-center gap-8 p-5 text-[30px] ">
-          <button className=" hover:bg-fuchsia-500 text-shadow-lg rounded-full">
+      <div className="bg-white/30 shadow-xl">
+        <header className="flex justify-center gap-8 p-5 text-[30px]">
+          <Link
+            href="/"
+            className="hover:bg-fuchsia-500 text-shadow-lg rounded-full px-4 py-2"
+          >
             Home
-          </button>
-          <button className=" hover:bg-fuchsia-500 text-shadow-lg rounded-full">
+          </Link>
+          <Link
+            href="/about_me"
+            className="hover:bg-fuchsia-500 text-shadow-lg rounded-full px-4 py-2"
+          >
             About Me
-          </button>
-          <button className=" hover:bg-fuchsia-500 text-shadow-lg rounded-full">
+          </Link>
+          <Link
+            href="/blog"
+            className="hover:bg-fuchsia-500 text-shadow-lg rounded-full px-4 py-2"
+          >
             Blogs
-          </button>
+          </Link>
         </header>
       </div>
       <main className="backdrop-blur-none bg-white/30 h-800  shadow-lg my-5 ">
@@ -34,7 +44,7 @@ export default function Home() {
             alt="welcome"
             className=" shadow-lg border-4 "
           />
-          <div className="p-8 text-[30px] w-120 ">
+          <div className="p-8 text-[30px] w-120 bg-black/30 border-4 border-white/30 shadow-lg ">
             <div className="text-[30px]">
               ----------------✨----------------
             </div>
@@ -43,8 +53,8 @@ export default function Home() {
               here i post blogs and things i love in general ,
             </li>
             <li className="text-[20px]">
-              I love Computer science and everything about it I also love taking
-              pictures , music and doing art
+              I love Computer science and everything about it ,I also love
+              taking pictures , music and doing art
             </li>
             <li className="text-[20px]">
               you can find the blogs and pictures in their respective categories
